@@ -11,7 +11,9 @@ namespace CollectionProblems
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to collection practice Problem ");
-            Console.WriteLine("Select any one option for Respective task\n" + "1. Count Of Remaining Chapters");
+            Console.WriteLine("Select any one option for Respective task\n" +
+                 "1. Count Of Remaining Chapters\n" +
+                 "2. Max Selling Price ");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -20,7 +22,13 @@ namespace CollectionProblems
                     chaptersCount.RemainingChapters();
                     break;
 
+                case 2:
+                    MaxSellPrice maxSellPrice = new MaxSellPrice();
+                    maxSellPrice.MaxSell();
+                    break;
+
                 default:
+                    Console.WriteLine("Please Enter valid option");
                     break;
             }
         }
